@@ -57,6 +57,7 @@ public enum RFXComValueSelector {
 	CONTACT("Contact", ContactItem.class),
 	VOLTAGE("Voltage", NumberItem.class),
 	SET_POINT("SetPoint", NumberItem.class)
+	NUMBER("Number", NumberItem.class)
 	;
 
 	private final String text;
