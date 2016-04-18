@@ -232,7 +232,13 @@ public class RFXComLighting4Message extends RFXComBaseMessage {
 						+ " to Command");
 			}
 			break;
-
+		case NUMBER:
+                	if (type instanceof DecimalType) {
+                		commandId = ((DecimalType) type).intValue();
+                	} else {
+                    	throw new RFXComException("Can't convert " + type + " to Command");
+                	}
+                	break;
 		default:
 			throw new RFXComException("Can't convert " + type + " to "
 					+ valueSelector);
